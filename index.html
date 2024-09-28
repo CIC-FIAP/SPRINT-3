@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CIC - Controle Inteligente de compensações</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="shortcut icon" href="./images/logo-cic-controle.9aa6482f.svg" />
+
+  <!-- Chamada para o Google Fonts! -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- CDN Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Chamadas para o CSS! -->
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/graficos.css" />
+  <link rel="stylesheet" href="./css/cards.css" />
+  <link rel="stylesheet" href="./css/modal.css" />
+  <link rel="stylesheet" href="./css/balao.css" />
+  <link rel="stylesheet" href="./css/dropdown.css" />
+  <link rel="stylesheet" href="./css/hovers.css" />
+  <link rel="stylesheet" href="./css/fundo-icons.css" />
+  <link rel="stylesheet" href="./css/darkmode.css" />
+</head>
+
+<body>
+  <!------------- Início Header! ------------->
+  <nav class="navbar navbar-expand-lg px-4">
+    <div class="container-fluid" id="headerBg">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation" style="margin: 0 60px 0 6px">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand my-1 mx-2" id="logo" href="#"><img src="./images\logo-cic-controle.9aa6482f.svg"
+          height="50rem" alt="Logo CIC" /></a>
+      <div class="collapse navbar-collapse headerList" id="navbarSupportedContent">
+        <ul class="headerIconsList navbar-nav me-auto mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link fw-medium hoverGreenHeader" aria-current="page" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium hoverGreenHeader" href="#">Controle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium hoverGreenHeader" href="#">Compliance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium hoverGreenHeader" href="#">Arquivo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium hoverGreenHeader" href="#">Vídeos</a>
+          </li>
+        </ul>
+      </div>
+      <form class="headerIconList d-flex" role="search">
+        <a href=""><i class="fa-solid headerIcon fa-bell px-2 hoverGreenHeader"></i></a>
+        <a href=""><i class="fa-solid headerIcon fa-comment-dots px-2 hoverGreenHeader"></i></a>
+        <a href=""><i class="fa-solid headerIcon fa-user px-2 hoverGreenHeader"></i></a>
+
+      </form>
+    </div>
+  </nav>
+
+  <!------------- Fim Header! ------------->
+
+  <!-- Cicquinho -->
+  <div class="posicao-cicquinho">
+    <div id="balao-cicquinho" class="posicao-balao">
+      <p>Como posso ajudar?</p>
+    </div>
+    <img class="cicquinho" src="./images/moedinho_3d_rosto_2.png" alt="imagem cicquinho" />
+  </div>
+  <!-- Cicquinho -->
+
+  <!------------- Início gráfico 1! ------------->
+
+  <div class="fundo-icons">
+    <p>Na CIC, você é o herói da sua jornada rumo à excelência.
+    </p>
+    <div class="dropdown w-100">
+      <div id="theme-switch">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+      </div>
+      <i class="fa-solid fa-filter dropbtn filtro hoverFilterIcon" onclick="myFunction()"></i>
+      <div id="myDropdown" class="dropdown-content">
+        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" />
+        <a href="">Por Unidade</a>
+        <a href="">Por Grupo</a>
+        <a href="">Por CNPJ do Crédito</a>
+        <a href="">Por Crédito</a>
+        <a href="">Por Grupo Tributo</a>
+        <a href="">Por Código Receita</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ajuste-cards">
+    <div class="cards1 d-flex align-items-flexstart w-100 row row-cols-auto">
+      <div class="cards-list d-flex w-100 ">
+        <div class="card rounded-4 item-card" style="width: 18rem">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="title-list d-flex w-100">
+              <h5 class="card-title">Processo Administrativo</h5>
+              <i id="open-modal" class="fa-solid fa-circle-info d-flex align-items-center hoverGreenIconCards1"></i>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+            <p class="card-text fw-bold">0</p>
+          </div>
+        </div>
+
+        <div class="card rounded-4 item-card" style="width: 18rem">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="title-list d-flex w-100">
+              <h5 class="card-title">Pedidos de Crédito</h5>
+              <i id="open-modal2" class="fa-solid fa-circle-info d-flex align-items-center hoverGreenIconCards1"></i>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+            <p class="card-text fw-bold">3</p>
+          </div>
+        </div>
+
+        <div class="card rounded-4 item-card" style="width: 18rem">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="title-list d-flex w-100">
+              <h5 class="card-title">Declaração de compensação</h5>
+              <i id="open-modal3" class="fa-solid fa-circle-info d-flex align-items-center hoverGreenIconCards1"></i>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+            <p class="card-text fw-bold">1</p>
+          </div>
+        </div>
+
+        <div class="card rounded-4 item-card" style="width: 18rem">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="title-list d-flex w-100">
+              <h5 class="card-title">Saldo de crédito original</h5>
+              <i id="open-modal4" class="fa-solid fa-circle-info d-flex align-items-center hoverGreenIconCards1"></i>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+            <p class="card-text fw-bold">29,0mil</p>
+          </div>
+        </div>
+
+        <div class="card rounded-4 item-card" style="width: 18rem">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="title-list d-flex w-100">
+              <h5 class="card-title">Saldo de Credito Atualizado</h5>
+              <i id="open-modal5" class="fa-solid fa-circle-info d-flex align-items-center hoverGreenIconCards1"></i>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+            <p class="card-text fw-bold">25,0mil</p>
+          </div>
+        </div>
+
+
+
+
+        <div class="card rounded-4 item-card2" style="width: 18rem">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="title-list d-flex w-100 justify-content-between">
+              <h5 class="card-title">Indeferimento em recurso</h5>
+              <i id="open-modal6" class="fa-solid fa-circle-info d-flex align-items-center hoverGreenIconCards2"></i>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+            <p class="card-text fw-bold">R$0,0</p>
+          </div>
+        </div>
+
+        <div class="card rounded-4 item-card2" style="width: 18rem">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="title-list d-flex w-100 justify-content-between">
+              <h5 class="card-title">Multas</h5>
+              <i id="open-modal7" class="fa-solid fa-circle-info d-flex align-items-center hoverGreenIconCards2"></i>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+            <p class="card-text fw-bold">R$0,0</p>
+          </div>
+        </div>
+
+        <div class="card rounded-4 item-card2" style="width: 18rem">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="title-list d-flex w-100 justify-content-between">
+              <h5 class="card-title">Juros</h5>
+              <i id="open-modal8" class="fa-solid fa-circle-info d-flex align-items-center hoverGreenIconCards2"></i>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+            <p class="card-text fw-bold">R$0,0</p>
+          </div>
+        </div>
+
+        <div class="card rounded-4 item-card2" style="width: 18rem">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="title-list d-flex w-100 justify-content-between">
+              <h5 class="card-title">Multas Isoladas e Juros</h5>
+              <i id="open-modal9" class="fa-solid fa-circle-info d-flex align-items-center hoverGreenIconCards2"></i>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+            <p class="card-text fw-bold">R$0,0</p>
+          </div>
+        </div>
+
+        <div class="card rounded-4 item-card2" style="width: 18rem">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div class="title-list d-flex w-100 justify-content-between">
+              <h5 class="card-title">Contingência Atualizada</h5>
+              <i id="open-modal10" class="fa-solid fa-circle-info d-flex align-items-center hoverGreenIconCards2"></i>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+            <p class="card-text fw-bold">R$0,0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="posicionamento-fundo">
+    <div class="fundo">
+      <!-- <div class="dropdown w-100">
+        <i
+          class="fa-solid fa-filter dropbtn filtro hoverFilterIcon"
+          onclick="myFunction()"
+        ></i>
+        <div id="myDropdown" class="dropdown-content">
+          <input
+            type="text"
+            placeholder="Search.."
+            id="myInput"
+            onkeyup="filterFunction()"
+          />
+          <a href="">Por Unidade</a>
+          <a href="">Por Grupo</a>
+          <a href="">Por CNPJ do Crédito</a>
+          <a href="">Por Crédito</a>
+          <a href="">Por Grupo Tributo</a>
+          <a href="">Por Código Receita</a>
+        </div>
+      </div> -->
+      <div class="grafico">
+        <div class="title">
+          <p>CRÉDITOS</p>
+        </div>
+        <div class="quadro2">
+          <canvas id="donut2" width="400" height="400"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!------------- fim gráfico 1! ------------->
+
+    <!------------- Início cards 1! ------------->
+
+    <!------------- Fim cards 1! ------------->
+
+    <!------------- Início gráfico 2! ------------->
+
+    <!-- <div class="dropdown w-100">
+        <i
+          class="fa-solid fa-filter dropbtn filtro hoverFilterIcon"
+          onclick="myFunction2()"
+        ></i>
+        <div id="myDropdown2" class="dropdown-content">
+          <input
+            type="text"
+            placeholder="Search.."
+            id="myInput2"
+            onkeyup="filterFunction2()"
+          />
+          <a href="">Por Unidade</a>
+          <a href="">Por Grupo</a>
+          <a href="">Por CNPJ do Crédito</a>
+          <a href="">Por Crédito</a>
+          <a href="">Por Grupo Tributo</a>
+          <a href="">Por Código Receita</a>
+        </div>
+      </div> -->
+    <div class="fundo">
+      <div class="grafico2">
+        <div class="title">
+          <p>DÉBITOS</p>
+        </div>
+        <div class="quadro">
+          <canvas id="donut" width="400" height="400"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------- Fim gráfico 2! ------------->
+
+  <!------------- Início cards 2! ------------->
+
+  <!------------- Fim cards 2! ------------->
+
+  <!------------- Seção modal! ------------->
+
+  <!-- Créditos! -->
+  <!-- Modal 1 -->
+  <div id="fade" class="hide"></div>
+  <div id="modal" class="hide">
+    <div class="label"></div>
+    <div class="modal-header">
+      <h3>Processo Administrativo</h3>
+      <button id="close-modal">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <p class="valor">0</p>
+      <p>
+        Quantidade de processos administrativos de crédito registrados na
+        base.
+      </p>
+    </div>
+  </div>
+  <!-- Fim Modal 1 -->
+
+  <!-- Modal 2 -->
+  <div id="fade2" class="hide"></div>
+  <div id="modal2" class="hide">
+    <div class="label"></div>
+    <div class="modal-header">
+      <h3>Pedidos de crédito</h3>
+      <button id="close-modal2">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <p class="valor">3</p>
+      <p>
+        Quantidade de pedidos de restituição / ressarcimento de crédito
+        registrados na base.
+      </p>
+    </div>
+  </div>
+  <!-- Fim Modal 2 -->
+
+  <!-- Modal 3 -->
+  <div id="fade3" class="hide"></div>
+  <div id="modal3" class="hide">
+    <div class="label"></div>
+    <div class="modal-header">
+      <h3>Declaração de compensação</h3>
+      <button id="close-modal3">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <p class="valor">1</p>
+      <p>Quantidade de declarações de compensação registrados na base.</p>
+    </div>
+  </div>
+  <!-- Fim Modal 3 -->
+
+  <!-- Modal 4 -->
+  <div id="fade4" class="hide"></div>
+  <div id="modal4" class="hide">
+    <div class="label"></div>
+    <div class="modal-header">
+      <h3>Saldo de crédito original</h3>
+      <button id="close-modal4">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <p class="valor">R$ 29.000,00</p>
+      <p>
+        Valor disponível de saldo de crédito em valor original, estimado com
+        base nos arquivos carregados
+      </p>
+      <p>Em análise: R$29.000,00</p>
+    </div>
+  </div>
+  <!-- Fim Modal 4 -->
+
+  <!-- Modal 5 -->
+  <div id="fade5" class="hide"></div>
+  <div id="modal5" class="hide">
+    <div class="label"></div>
+    <div class="modal-header">
+      <h3>Saldo de Credito Atualizado</h3>
+      <button id="close-modal5">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <p class="valor">R$25.000,00</p>
+      <p>
+        Valor de saldo de crédito disponível - mediante os arquivos
+        carregados.
+      </p>
+      <p>Em análise: R$25.000,00</p>
+    </div>
+  </div>
+  <!-- Fim Modal 5 -->
+
+  <!-- Débitos! -->
+  <!-- Modal 6 -->
+  <div id="fade6" class="hide"></div>
+  <div id="modal6" class="hide">
+    <div class="label-2"></div>
+    <div class="modal-header">
+      <h3>Indeferimento de recurso</h3>
+      <button id="close-modal6">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <p class="valor">R$ 0,00</p>
+      <p>
+        Valor disponível de saldo de crédito em valor atualizado, estimado com
+        base nos arquivos carregados.
+      </p>
+    </div>
+  </div>
+  <!-- Fim Modal 6-->
+
+  <!-- Modal 7 -->
+  <div id="fade7" class="hide"></div>
+  <div id="modal7" class="hide">
+    <div class="label-2"></div>
+    <div class="modal-header">
+      <h3>Multas</h3>
+      <button id="close-modal7">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <p class="valor">R$ 0,00</p>
+      <p>Valor de multa incidente sobre as compensações não homologadas.</p>
+    </div>
+  </div>
+  <!-- Fim Modal 7-->
+
+  <!-- Modal 8 -->
+  <div id="fade8" class="hide"></div>
+  <div id="modal8" class="hide">
+    <div class="label-2"></div>
+    <div class="modal-header">
+      <h3>Juros</h3>
+      <button id="close-modal8">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <p class="valor">R$ 0,00</p>
+      <p>Valor de juros incidente sobre as compensações não homologadas.</p>
+    </div>
+  </div>
+  <!-- Fim Modal 8-->
+
+  <!-- Modal 9 -->
+  <div id="fade9" class="hide"></div>
+  <div id="modal9" class="hide">
+    <div class="label-2"></div>
+    <div class="modal-header">
+      <h3>Multas Isoladas e Juros</h3>
+      <button id="close-modal9">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <p class="valor">R$ 0,00</p>
+      <p>
+        Valor de multa isolada e juros incidente sobre as compensações não
+        homologadas e mediante auto de infração.
+      </p>
+    </div>
+  </div>
+  <!-- Fim Modal 9-->
+
+  <!-- Modal 10 -->
+  <div id="fade10" class="hide"></div>
+  <div id="modal10" class="hide">
+    <div class="label-2"></div>
+    <div class="modal-header">
+      <h3>Contingência Atualizada</h3>
+      <button id="close-modal10">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <p class="valor">R$ 0,00</p>
+      <p>
+        Valor total e atualizado de contingência, estimado com base nos
+        arquivos carregados e lançamentos registrados.
+      </p>
+    </div>
+  </div>
+  <!-- Fim Modal 10-->
+
+  <!-- Chamada para os gráficos e para o JS!  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./js/graficos.js"></script>
+  <script src="./js/modais.js"></script>
+  <script src="./js/balao.js"></script>
+  <script src="./js/dropdown.js"></script>
+  <script src="./js/sanduiche.js"></script>
+  <script src="./js/darkmode.js"></script>
+</body>
+
+</html>

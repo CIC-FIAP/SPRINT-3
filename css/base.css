@@ -1,0 +1,74 @@
+/* Reset CSS! */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis! */
+:root {
+  --color-primary: #404040;
+  --color-gray: #808080;
+  --color-dark: #1e1e1e;
+  --color-green: #049f51;
+  --color-blue: #0350c4;
+  --color-darkBlue: #1a3153;
+  --color-body: #f5f5f5;
+  --color-white: #ffffff;
+  --color-drop: #ddd;
+  --color-black: #000000;
+  --color-card:#fff;
+  --color-text:#000;
+  --color-fundo:#fff;
+  --color-shadow: #88888866;
+}
+
+.darkmode {
+  --color-primary: #404040;
+  --color-gray: #808080;
+  --color-dark: #1e1e1e;
+  --color-darkBlue: #39D98A;
+  --color-blue: #049f51;
+  --color-green: #1a3153;
+  --color-body: #322F35;
+  --color-white: #ffffff;
+  --color-drop: #ddd;
+  --color-black: #000000;
+  --color-text:#fff;
+  --color-card:#4F4E51;
+  --color-fundo:#4F4E51;
+  --color-shadow: rgb(0, 0, 0, 0);
+}
+
+.darkblue {
+  color: var(--color-darkBlue);
+}
+
+/* Mais alguns pré-sets! */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url(/images/backklinnes.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 1.6rem;
+  font-family: lato;
+  background-color: var(--color-body);
+  /* background-color: var(--color-body);
+  ::selection {
+    background-color: var(--color-green);
+    color: #f5f5f5;
+  } */
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
