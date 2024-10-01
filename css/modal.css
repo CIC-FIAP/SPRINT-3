@@ -11,6 +11,10 @@ button {
   transition: 0.5s;
 }
 
+.darkmode button {
+  color: var(--color--button);
+}
+
 button:hover {
   opacity: 1;
 }
@@ -25,6 +29,10 @@ button:hover {
 .modal-body p {
   padding-left: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.darkmode .modal-body p {
+  color: var(--color-dark);
 }
 
 /* CSS "específico" para cada modal! */
@@ -491,3 +499,19 @@ button:hover {
   pointer-events: none; /* impede que eventos de pointer acontecam, enquanto a modal e o fade estiverem sem opacidade!*/
 }
 /* Fim modal 10 */
+
+.darkmode {
+  & #modal,
+  #modal2,
+  #modal3,
+  #modal4,
+  #modal5,
+  #modal6,
+  #modal7,
+  #modal8,
+  #modal9,
+  #modal10 {
+    background-color: var(--color-card);
+    box-shadow: #383636 0px 5px 20px 5px;
+  }
+}

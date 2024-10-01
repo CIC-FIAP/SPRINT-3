@@ -51,7 +51,7 @@
   display: flex;
   gap: 5rem;
   width: 100%;
-  color: gainsboro;
+  color: #dcdcdc;
 
   & i {
     font-size: 2.5rem;
@@ -82,7 +82,6 @@
 .headerIconsList {
   align-items: center;
   margin-bottom: 1.1rem;
-  
 }
 
 .headerList {
@@ -106,7 +105,7 @@ ul {
   padding-left: 0 !important;
 }
 
-.container-fluid{
+.container-fluid {
   justify-content: space-around !important;
 }
 
@@ -208,10 +207,14 @@ ul {
     padding: 1rem;
     padding: 1rem;
     width: 100%;
-    position: fixed;
+    position: fixed !important;
     top: 0;
     right: 0;
     left: 0;
     z-index: 100;
+  }
+
+  .darkmode .container-fluid {
+    background-color: var(--color-fundo) !important;
   }
 }

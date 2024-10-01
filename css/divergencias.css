@@ -1,0 +1,75 @@
+body{
+    background-image: url(/images/Group\ 1.svg);
+}
+
+.ajuste-divergencias{
+    width: 90%;
+    margin: 5rem auto auto auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+    & p{
+        font-size: 3rem;
+        width: 100%;
+        color: var(--color-dark);
+        
+    }
+
+    & span{
+        font-size: 2rem;
+        color: var(--color-dark);
+    }
+
+    & li{
+        color: var(--color-dark);
+    }
+
+}
+
+.divergencia-1{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 8rem;
+    background-color: var(--color-fundo);
+    border-radius: 1rem;
+    box-shadow: var(--color-shadow) 0px 5px 20px 5px;
+
+    & button{
+        width: 20%;
+        margin: auto;
+        border-radius: 10rem;
+        padding: 1rem;
+        background-color: var(--color-blue);
+    }
+}
+
+
+
+.divergencia-1:last-child{
+    margin-top: 1rem;
+}
+
+.divergencia-2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 8rem;
+    width: 30%;
+    border-radius: 1rem;
+    box-shadow: var(--color-shadow) 0px 5px 20px 5px;
+    background-color: var(--color-fundo);
+}
+
+.laranja{
+    color: #ffa500;
+}
+
+.vermelho{
+    color: #ff0000;
+}
+
+.verde{
+    color: #008000;
+}

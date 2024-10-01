@@ -17,27 +17,28 @@
   --color-white: #ffffff;
   --color-drop: #ddd;
   --color-black: #000000;
-  --color-card:#fff;
-  --color-text:#000;
-  --color-fundo:#fff;
+  --color-card: #fff;
+  --color-text: #000;
+  --color-fundo: #fff;
   --color-shadow: #88888866;
 }
 
 .darkmode {
+  --color--button: #ffffff;
   --color-primary: #404040;
   --color-gray: #808080;
-  --color-dark: #1e1e1e;
-  --color-darkBlue: #39D98A;
-  --color-blue: #049f51;
+  --color-dark: #dcdada;
+  --color-darkBlue: #049f51;
+  --color-blue: #39d98a;
   --color-green: #1a3153;
-  --color-body: #322F35;
+  --color-body: #322f35;
   --color-white: #ffffff;
-  --color-drop: #ddd;
-  --color-black: #000000;
-  --color-text:#fff;
-  --color-card:#4F4E51;
-  --color-fundo:#4F4E51;
-  --color-shadow: rgb(0, 0, 0, 0);
+  --color-drop: #808080;
+  --color-black: #dcdada;
+  --color-text: #dcdada;
+  --color-card: #4f4e51;
+  --color-fundo: #4f4e51;
+  --color-shadow: #2f2f2f00;
 }
 
 .darkblue {
