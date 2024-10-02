@@ -109,6 +109,10 @@ ul {
   justify-content: space-around !important;
 }
 
+.px-2{
+  font-size: 2.3rem;
+}
+
 @media (width > 1920px) {
   .headerList {
     min-width: 59%;

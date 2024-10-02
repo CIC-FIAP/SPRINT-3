@@ -56,17 +56,21 @@
             <a class="nav-link fw-medium hoverGreenHeader" href="#">Controle</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium hoverGreenHeader" href="/divergencias.html">Divergência</a>
+            <a class="nav-link fw-medium hoverGreenHeader" href="">Divergência</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fw-medium hoverGreenHeader" href="#">Arquivo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium hoverGreenHeader" href="#">Vídeos</a>
+            <a class="nav-link fw-medium hoverGreenHeader" href="./triagem.html">Vídeos</a>
           </li>
         </ul>
       </div>
       <form class="headerIconList d-flex" role="search">
+
+        <div class="tooltip-header"><a href="/divergencias.html"><i class="fa-solid fa-file-invoice-dollar px-2 hoverGreenHeader"></i></a><span
+            class="tooltiptext"> Sumário de divergências</span>
+        </div>
         <div class="tooltip-header"><a href=""><i
               class="fa-solid fa-circle-question px-2 hoverGreenHeader"></i></a><span class="tooltiptext">FAQ</span>
         </div>
@@ -101,7 +105,8 @@
       </div>
 
 
-      <div class="tooltip-icon"><i class="fa-solid fa-filter dropbtn filtro hoverFilterIcon" onclick="myFunction()"></i><span class="tooltiptext">Filtros</span></div>
+      <div class="tooltip-icon"><i class="fa-solid fa-filter dropbtn filtro hoverFilterIcon"
+          onclick="myFunction()"></i><span class="tooltiptext">Filtros</span></div>
       <div id="myDropdown" class="dropdown-content">
         <input type="text" placeholder="Pesquisar..." id="myInput" onkeyup="filterFunction()" />
         <a href="">Por Unidade</a>
