@@ -7,7 +7,9 @@
   <title>CIC - Controle Inteligente de compensações</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <a href="index.html">
     <link rel="shortcut icon" href="./images/logo-cic-controle.9aa6482f.svg" />
+  </a>
 
   <!-- Chamada para o Google Fonts! -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,20 +44,20 @@
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation" style="margin: 0 60px 0 6px">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fa-solid fa-bars"></i>
       </button>
-      <a class="navbar-brand my-1 mx-2" id="logo" href="/"><img src="./images\logo-cic-controle.9aa6482f.svg"
+      <a class="navbar-brand my-1 mx-2" id="logo" href="./dash.html"><img src="./images\logo-cic-controle.9aa6482f.svg"
           height="50rem" alt="Logo CIC" /></a>
       <div class="collapse navbar-collapse headerList" id="navbarSupportedContent">
         <ul class="headerIconsList navbar-nav me-auto mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link fw-medium hoverGreenHeader" aria-current="page" href="/">Dashboard</a>
+            <a class="nav-link fw-medium hoverGreenHeader" href="./dash.html">Dashboard</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fw-medium hoverGreenHeader" href="#">Controle</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium hoverGreenHeader" href="">Divergência</a>
+            <a class="nav-link fw-medium hoverGreenHeader" href="divergencias.html">Divergência</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fw-medium hoverGreenHeader" href="#">Arquivo</a>
@@ -67,8 +69,9 @@
       </div>
       <form class="headerIconList d-flex" role="search">
 
-        <div class="tooltip-header"><a href="/divergencias.html"><i class="fa-solid fa-file-invoice-dollar px-2 hoverGreenHeader"></i></a><span
-            class="tooltiptext"> Sumário de divergências</span>
+        <div class="tooltip-header"><a href="/divergencias.html"><i
+              class="fa-solid fa-file-invoice-dollar px-2 hoverGreenHeader"></i></a><span class="tooltiptext"> Sumário
+            de divergências</span>
         </div>
         <div class="tooltip-header"><a href=""><i
               class="fa-solid fa-circle-question px-2 hoverGreenHeader"></i></a><span class="tooltiptext">FAQ</span>
@@ -81,7 +84,7 @@
     </div>
   </nav>
   <div class="fundo-icons">
-    <p>Na CIC, você é o herói da sua jornada rumo à excelência.</p>
+    <p>Seja bem-vindo, André!<span>&nbsp;Na CIC, você é o herói da sua jornada em busca da excelência.</span></p>
     <div class="dropdown w-100">
       <div id="theme-switch">
         <div class="tooltip-icon"><i id="darkMode" class="fa-solid fa-moon"></i><span class="tooltiptext">Modo
@@ -90,7 +93,8 @@
       </div>
 
 
-      <div class="tooltip-icon"><i class="fa-solid fa-filter dropbtn filtro hoverFilterIcon" onclick="myFunction()"></i><span class="tooltiptext">Filtros</span></div>
+      <div class="tooltip-icon"><i class="fa-solid fa-filter dropbtn filtro hoverFilterIcon"
+          onclick="myFunction()"></i><span class="tooltiptext">Filtros</span></div>
       <div id="myDropdown" class="dropdown-content">
         <input type="text" placeholder="Pesquisar..." id="myInput" onkeyup="filterFunction()" />
         <a href="">Por Unidade</a>
@@ -106,7 +110,8 @@
   <div class="ajuste-divergencias">
     <div>
       <div class="divergencia-1">
-        <p>DIVERGÊNCIAS PENDENTES | <span>Atenção, prazos curtos para resolver divergências!</span></p>
+        <p>DIVERGÊNCIAS PENDENTES | <span class="spantitlePendentes">Atenção, prazos curtos para resolver
+            divergências!</span></p>
         <li>
           <ol><i class="fa-solid fa-circle laranja"></i> IRPJ2: Por meio de nossas análises encontramos que você possui
             um crédito de 500,00 reais.
@@ -121,7 +126,7 @@
         <button>Controle</button>
       </div>
       <div class="divergencia-1">
-        <p>VENCIDAS | <span>Acesse o menu controle e fique atento aos prazos!</span>
+        <p>VENCIDAS | <span class="spantitleVencidas">Acesse o menu controle e fique atento aos prazos!</span>
         </p>
         <li>
           <ol><i class="fa-solid fa-circle vermelho"></i> IRPF12: Por meio de nossas análises encontramos que você
@@ -132,7 +137,8 @@
     </div>
     <div class="divergencia-2">
       <p>CONCLUÍDAS</p>
-      <span>Parabéns, seu esforço e responsabiliade foram execpcionais para superar esse desafio!!! Conte conosco para
+      <span class="spantitleConcluidas">Parabéns, seu esforço e responsabiliade foram excepcionais para superar esse
+        desafio!!! Conte conosco para
         resolver os outros!</span>
       <li>
         <ol><i class="fa-solid fa-circle verde"></i> IRRPJ5</ol>
@@ -144,6 +150,15 @@
         <ol><i class="fa-solid fa-circle verde"></i> IRPJ4</ol>
       </li>
     </div>
+  </div>
+
+  <div class="posicao-cicquinho">
+    <div id="balao-cicquinho" class="posicao-balao">
+      <p>Para esclarecer todas as suas dúvidas, clique aqui e fale com a nossa IA pelo WhatsApp!😊</p>
+    </div>
+    <a class="cicquinhoBtn" href="https://wa.me/5511986702611">
+      <img class="cicquinho" src="./images/moedinho_3d_rosto_2.png" alt="imagem cicquinho" />
+    </a>
   </div>
 
 

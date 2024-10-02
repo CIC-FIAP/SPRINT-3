@@ -13,9 +13,8 @@ const disbleDarkmode = () => {
 
 if (darkmode === "active") {
   enableDarkmode();
-  mudarCorGrafico()
+  mudarCorGrafico();
 }
-
 themeSwitch.addEventListener("click", () => {
   darkmode = localStorage.getItem("darkmode");
   darkmode !== "active" ? enableDarkmode() : disbleDarkmode();

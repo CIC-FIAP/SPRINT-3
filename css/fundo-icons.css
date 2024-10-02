@@ -18,10 +18,11 @@
     align-items: center;
     margin-bottom: 0;
     color: var(--color-gray);
+    text-wrap: nowrap;
   }
 }
 
-.darkmode .fundo-icons p{
+.darkmode .fundo-icons p {
   color: var(--color-text);
 }
 
@@ -36,7 +37,7 @@
   .fundo-icons {
     margin-top: 12rem;
 
-    & p{
+    & span {
       display: none;
     }
   }

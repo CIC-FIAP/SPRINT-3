@@ -11,6 +11,10 @@
   z-index: 999;
 }
 
+.cicquinhoBtn{
+  background-color: transparent;
+}
+
 .posicao-balao {
   display: flex;
   justify-content: center;
@@ -56,12 +60,12 @@
   }
 } */
 
-@media (width <= 768px) {
+/* @media (width <= 768px) {
   .posicao-balao {
-    display: none;
+    
   }
 
   .cicquinho {
-    display: none;
+    
   }
-}
+} */

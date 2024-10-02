@@ -51,7 +51,9 @@ html {
 }
 
 body {
+  /* background-image: url(/images/backklinnes.svg); */
   background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: contain;
   font-size: 1.6rem;
   font-family: lato;
